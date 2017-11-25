@@ -1,7 +1,7 @@
 package com.xiaojukeji.ehr.security.controller.api;
 
-import com.xiaojukeji.base.common.util.Security;
 import com.xiaojukeji.ehr.security.model.DencryptionDTO;
+import com.xiaojukeji.ehr.security.service.Security;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 

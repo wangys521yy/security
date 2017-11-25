@@ -101,19 +101,6 @@
             <artifactId>commons-collections</artifactId>
         </dependency>
 
-        <!-- common util -->
-        <dependency>
-            <groupId>com.xiaojukeji.base</groupId>
-            <artifactId>common-util</artifactId>
-            <version>${common.util.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
         <!-- Json Support -->
         <dependency>
             <groupId>net.sf.json-lib</groupId>
