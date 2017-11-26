@@ -1,4 +1,4 @@
 /**
  * Spring Framework Configuration Files
  */
-package com.xiaojukeji.ehr.security.mapper;
+package com.waysli.tools.security.mapper;

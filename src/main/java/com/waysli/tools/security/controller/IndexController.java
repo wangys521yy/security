@@ -1,7 +1,7 @@
 /**
  * Index Controller, project entrance
  */
-package com.xiaojukeji.ehr.security.controller;
+package com.waysli.tools.security.controller;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * 服务首页
  *
- * @author wangyongsheng
+ * @author waysli
  * @date 16/10/9 下午3:31
  */
 @RestController

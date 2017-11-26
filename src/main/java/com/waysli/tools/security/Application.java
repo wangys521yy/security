@@ -1,4 +1,4 @@
-package com.xiaojukeji.ehr.security;
+package com.waysli.tools.security;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.xiaojukeji.ehr.security.mapper")
+@MapperScan("com.waysli.tools.security.mapper")
 public class Application {
 
     private static final Logger logger = LoggerFactory.getLogger(Application.class);

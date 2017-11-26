@@ -1,4 +1,4 @@
-package com.xiaojukeji.ehr.security.service;
+package com.waysli.tools.security.service;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -13,7 +13,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * Security 为开发接口提供安全传输方案, 包括数字签名和加解密服务
  *
- * @author wangyongsheng
+ * @author waysli
  * @create 2017-10-17 下午5:25
  **/
 public class Security {
@@ -21,7 +21,7 @@ public class Security {
      * 获得随机的128位密码, 用于Api客户端生成临时密码
      *
      * @return 128位密码
-     * @author wangyongsheng
+     * @author waysli
      * @date 16/12/26 下午8:29
      */
     public static String getSecretKey() {
@@ -41,7 +41,7 @@ public class Security {
      * @param plainText 要加密的文本明文
      * @return 加密后的数据
      * @throws Exception
-     * @author wangyongsheng
+     * @author waysli
      * @date 16/12/26 下午3:20
      */
     public static String encryptData(String cipherKey, String plainText) throws Exception {
@@ -67,7 +67,7 @@ public class Security {
      * @param cipherText 要解密的文本密文
      * @return 解密后的数据
      * @throws Exception
-     * @author wangyongsheng
+     * @author waysli
      * @date 16/12/26 下午4:32
      */
     public static String decryptData(String cipherKey, String cipherText) throws Exception {
@@ -92,7 +92,7 @@ public class Security {
      * @param content 要签名的文本内容
      * @return 签名结果
      * @throws Exception
-     * @author wangyongsheng
+     * @author waysli
      * @date 16/12/26 下午6:32
      */
     public static String getSignature(String content) throws NoSuchAlgorithmException {

@@ -1,17 +1,19 @@
-package com.xiaojukeji.ehr.security.controller.api;
+package com.waysli.tools.security.controller.api;
 
-import com.xiaojukeji.ehr.security.model.DencryptionDTO;
-import com.xiaojukeji.ehr.security.service.Security;
+import com.waysli.tools.security.model.DencryptionDTO;
+import com.waysli.tools.security.service.Security;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * 传输加解密、签名等相关接口
  *
- * @author wangyongsheng
+ * @author waysli
  * @create 2017-10-18 下午2:33
  **/
 @RestController
+@Api(value = "加解密rest接口")
 @RequestMapping("/api/security")
 public class SecurityController {
 
