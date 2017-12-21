@@ -9,7 +9,9 @@ import rx.Observable;
 import rx.Observer;
 import rx.functions.Action1;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -125,6 +127,34 @@ public class CommandHelloWorld extends HystrixCommand<String> {
 
         @Test
         public void testAsynchronous2() throws Exception {
+            LinkedBlockingQueue<String> queue = new LinkedBlockingQueue<>();
+            queue.put("test1");
+            queue.put("test2");
+            queue.put("test3");
+            queue.peek();
+
+            Object o1 = true ? new Integer(1) : new Double(2.0);
+            Object o2;
+            if (true) {
+                o2 = new Integer(1);
+            } else {
+                o2 = new Double(3.0);
+            }
+
+
+            byte b = 10;
+            b *= 5.7;
+            byte c = 100;
+            c /= 2.5;
+            System.out.println(b);
+            System.out.println(c);
+
+
+            System.out.println(o1);
+            System.out.println(o2);
+            for (int i = 0; i < 10; i++) {
+                System.out.println((Integer)i);
+            }
 
             Future<String> fWorld = new CommandHelloWorld("World").queue();
             Future<String> fBob = new CommandHelloWorld("Bob").queue();
@@ -267,5 +297,29 @@ public class CommandHelloWorld extends HystrixCommand<String> {
             }
         }
 
+        @Test
+        public void testConcurrentLinkedQueue() throws Exception {
+            ConcurrentLinkedQueue<String> queue = new ConcurrentLinkedQueue();
+            queue.offer("test1");
+            System.out.println(queue.poll());
+            queue.offer("test2");
+            queue.offer("test3");
+            queue.offer("test4");
+            System.out.println(queue.poll());
+            System.out.println(queue.poll());
+            System.out.println(queue.poll());
+            System.out.println(queue.poll());
+        }
+
+        @Test
+        public void testConcurrentHashMap() throws Exception {
+            ConcurrentHashMap<String, Object> map = new ConcurrentHashMap<>();
+            map.put("test1", "value1");
+            map.put("test2", 123456);
+            map.put("test2", 123.21);
+            map.size();
+            System.out.println(map.get("test1"));
+            System.out.println(map.get("test2"));
+        }
     }
 }
